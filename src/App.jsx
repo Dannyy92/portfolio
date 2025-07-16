@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import './styles/App.css';
+import Hero from './Hero';
+import About from './About';
+import Skills from './Skills';
+import Projects from './Projects';
+import Contact from './Contact';
+import Footer from './Footer';
+import './App.css';
 
 function App() {
   const [theme, setTheme] = useState(() => {

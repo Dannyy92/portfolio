@@ -1,36 +1,83 @@
-import React, { useEffect, useRef } from 'react';
-import './App.css';
+import { useEffect, useRef } from 'react';
 
-// Skills section: List your technical and soft skills here.
-function Skills({ darkMode }) {
+function Skills() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const onScroll = () => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        section.classList.add('visible');
-        window.removeEventListener('scroll', onScroll);
-      }
-    };
-    window.addEventListener('scroll', onScroll);
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
+  const skillCategories = [
+    {
+      title: "Frontend",
+      skills: [
+        { name: "React", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "TypeScript", level: 80 },
+        { name: "CSS/SCSS", level: 85 }
+      ]
+    },
+    {
+      title: "Backend",
+      skills: [
+        { name: "Node.js", level: 80 },
+        { name: "Python", level: 75 },
+        { name: "MongoDB", level: 70 },
+        { name: "PostgreSQL", level: 75 }
+      ]
+    },
+    {
+      title: "Tools",
+      skills: [
+        { name: "Git", level: 85 },
+        { name: "Docker", level: 70 },
+        { name: "AWS", level: 65 },
+        { name: "Figma", level: 80 }
+      ]
+    }
+  ];
+
   return (
-    <section className="skills fade-in" id="skills" ref={sectionRef}>
-      <h2>Skills</h2>
-      <ul className="skills-list">
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>HTML & CSS</li>
-        <li>Node.js</li>
-        <li>UI/UX Design</li>
-        <li>Teamwork & Communication</li>
-        {/* Add or remove skills as needed */}
-      </ul>
+    <section id="skills" className="skills" ref={sectionRef}>
+      <div className="container">
+        <h2>Skills & Technologies</h2>
+        <div className="skills-grid">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="skill-category">
+              <h3>{category.title}</h3>
+              <div className="skills-list">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="skill-item">
+                    <div className="skill-info">
+                      <span className="skill-name">{skill.name}</span>
+                      <span className="skill-level">{skill.level}%</span>
+                    </div>
+                    <div className="skill-bar">
+                      <div 
+                        className="skill-progress" 
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

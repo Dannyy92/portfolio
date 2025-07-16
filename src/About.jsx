@@ -1,34 +1,59 @@
-import React, { useEffect, useRef } from 'react';
-import './App.css';
+import { useEffect, useRef } from 'react';
 
-// About section: Brief introduction and photo (replace with your own info and image).
-function About({ darkMode }) {
+function About() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const onScroll = () => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        section.classList.add('visible');
-        window.removeEventListener('scroll', onScroll);
-      }
-    };
-    window.addEventListener('scroll', onScroll);
-    onScroll(); // check on mount
-    return () => window.removeEventListener('scroll', onScroll);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="about fade-in" id="about" ref={sectionRef}>
-      <h2>About Me</h2>
-      <div className="about-content">
-        {/* Replace the src with your own photo in the public or assets folder */}
-        <img src="https://via.placeholder.com/150" alt="Your Name" className="about-photo" />
-        <div>
-          <p>
-            Hello! I'm Your Name, a passionate web developer with experience in building modern, responsive websites and applications. I love turning ideas into reality using code.
-          </p>
+    <section id="about" className="about" ref={sectionRef}>
+      <div className="container">
+        <h2>About Me</h2>
+        <div className="about-content">
+          <div className="about-text">
+            <p>
+              Hello! I'm John, a passionate full-stack developer with 3+ years 
+              of experience creating digital solutions. I love turning complex 
+              problems into simple, beautiful designs.
+            </p>
+            <p>
+              When I'm not coding, you can find me exploring new technologies, 
+              contributing to open source projects, or enjoying a good cup of coffee.
+            </p>
+          </div>
+          <div className="about-image">
+            <img src="https://via.placeholder.com/300x300" alt="About me" />
+          </div>
+        </div>
+        
+        <div className="highlights">
+          <div className="highlight-item">
+            <h3>50+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div className="highlight-item">
+            <h3>3+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div className="highlight-item">
+            <h3>20+</h3>
+            <p>Happy Clients</p>
+          </div>
         </div>
       </div>
     </section>
