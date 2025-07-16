@@ -17,7 +17,7 @@
   color: #181a1b !important;
 }
 
-.hero, .about, .skills, .projects, .contact, .footer {
+.hero, .about, .skills, .projects, .contact, .footer , h1, h2, h3, p, li, span{
   color: #181a1b !important;
   background: #fff;
 }
@@ -207,8 +207,4 @@
 }
 .social-links a:hover {
   color: #0057d8;
-}
-
-body, #root, .hero, .about, .skills, .projects, .contact, .footer, h1, h2, h3, p, li, span {
-  color: #181a1b !important;
 }
