@@ -1,10 +1,16 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
+/**
+ * About.jsx
+ * Minimalist About section with personal summary and highlights.
+ * Edit text and highlights as needed.
+ */
 function About() {
+  // Ref for fade-in animation
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const observer = new window.IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('fade-in');
@@ -12,11 +18,7 @@ function About() {
       },
       { threshold: 0.1 }
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -25,33 +27,32 @@ function About() {
       <div className="container">
         <h2>About Me</h2>
         <div className="about-content">
+          {/* About text */}
           <div className="about-text">
             <p>
-              Hello! I'm John, a passionate full-stack developer with 3+ years 
-              of experience creating digital solutions. I love turning complex 
-              problems into simple, beautiful designs.
+              Hi! I'm Jane, a full-stack developer focused on building clean, user-centric web apps. I love solving problems with code and design.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, 
-              contributing to open source projects, or enjoying a good cup of coffee.
+              Outside of coding, I enjoy exploring new tech, contributing to open source, and sipping great coffee.
             </p>
           </div>
+          {/* About image placeholder (replace src with your own image for production) */}
           <div className="about-image">
-            <img src="https://via.placeholder.com/300x300" alt="About me" />
+            <img src="https://placehold.co/300x300?text=About+Me" alt="About me placeholder" />
           </div>
         </div>
-        
+        {/* Highlights */}
         <div className="highlights">
           <div className="highlight-item">
-            <h3>50+</h3>
-            <p>Projects Completed</p>
+            <h3>30+</h3>
+            <p>Projects Delivered</p>
           </div>
           <div className="highlight-item">
-            <h3>3+</h3>
+            <h3>4+</h3>
             <p>Years Experience</p>
           </div>
           <div className="highlight-item">
-            <h3>20+</h3>
+            <h3>15+</h3>
             <p>Happy Clients</p>
           </div>
         </div>

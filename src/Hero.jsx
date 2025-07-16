@@ -1,23 +1,37 @@
 import React, { useEffect, useRef } from 'react';
 import './App.css';
 
-// Hero section: Displays your name, tagline, and a call-to-action button.
-// Edit the name, tagline, and button text as needed.
-function Hero({ darkMode }) {
-  // Ref for fade-in effect
+/**
+ * Hero.jsx
+ * Modern hero section with name, tagline, and call-to-action.
+ * Edit name, tagline, and button as needed.
+ */
+function Hero() {
+  // Ref for fade-in animation
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // Add 'visible' class for fade-in on mount
-    sectionRef.current.classList.add('visible');
+    sectionRef.current.classList.add('fade-in');
   }, []);
 
   return (
-    <section className="hero fade-in" ref={sectionRef}>
-      <h1>Your Name</h1>
-      <h2>Web Developer | Designer | Creator</h2>
-      <p>Welcome to my portfolio! Explore my work and skills below.</p>
-      <a href="#projects" className="cta-button">See My Projects</a>
+    <section id="hero" className="hero" ref={sectionRef}>
+      <div className="container hero-content">
+        {/* Hero text */}
+        <div className="hero-text">
+          <h1>Jane Doe</h1>
+          <h2>Building beautiful, functional web experiences</h2>
+          <p>Modern full-stack developer passionate about design, code, and user experience.</p>
+          <div className="hero-actions">
+            <a href="#projects" className="btn btn-primary">View Projects</a>
+            <a href="#contact" className="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        {/* Hero image placeholder (replace src with your own image for production) */}
+        <div className="hero-image">
+          <img src="https://placehold.co/300x300?text=Profile" alt="Profile placeholder" className="image-placeholder" />
+        </div>
+      </div>
     </section>
   );
 }
