@@ -16,11 +16,11 @@ function App() {
 
   // Update the root class and localStorage when darkMode changes
   useEffect(() => {
-    const root = document.body;
+    const body = document.body;
     if (darkMode) {
-      root.classList.add('dark-mode');
+      body.classList.add('dark-mode');
     } else {
-      root.classList.remove('dark-mode');
+      body.classList.remove('dark-mode');
     }
     localStorage.setItem('darkMode', darkMode);
   }, [darkMode]);
