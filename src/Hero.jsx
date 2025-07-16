@@ -25,12 +25,11 @@ function Hero() {
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">View Projects</a>
             <a href="#contact" className="btn btn-secondary">Contact Me</a>
+            {/* Button to view PDF resume (replace href with your actual PDF file) */}
+            <a href="/resume.pdf" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
           </div>
         </div>
-        {/* Hero image placeholder (replace src with your own image for production) */}
-        <div className="hero-image">
-          <img src="https://placehold.co/300x300?text=Profile" alt="Profile placeholder" className="image-placeholder" />
-        </div>
+        {/* Removed profile image for a cleaner hero section */}
       </div>
     </section>
   );

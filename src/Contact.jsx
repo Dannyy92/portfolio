@@ -1,15 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 /**
  * Contact.jsx
- * Minimalist contact section with info and a simple form.
- * Edit contact details and form logic as needed.
+ * Minimalist contact section with info only (no form).
+ * Edit contact details as needed.
  */
 function Contact() {
   // Ref for fade-in animation
   const sectionRef = useRef(null);
-  // Form state
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
@@ -24,25 +22,12 @@ function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  // Handle form input changes
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here (e.g., email service)
-    alert('Message sent! (This is a demo)');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <section id="contact" className="contact" ref={sectionRef}>
       <div className="container">
         <h2>Get In Touch</h2>
         <div className="contact-content">
-          {/* Contact info */}
+          {/* Contact info only, no form */}
           <div className="contact-info">
             <h3>Let's work together!</h3>
             <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate!</p>
@@ -70,22 +55,6 @@ function Contact() {
               </div>
             </div>
           </div>
-          {/* Contact form */}
-          <form className="contact-form" onSubmit={handleSubmit} autoComplete="off">
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" value={formData.message} onChange={handleChange} required></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">Send Message</button>
-          </form>
         </div>
       </div>
     </section>

@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 
 /**
  * About.jsx
- * Minimalist About section with personal summary and highlights.
- * Edit text and highlights as needed.
+ * Minimalist About section for a fresh graduate portfolio.
+ * Edit text and image as needed.
  */
 function About() {
   // Ref for fade-in animation
@@ -30,10 +30,10 @@ function About() {
           {/* About text */}
           <div className="about-text">
             <p>
-              Hi! I'm Jane, a full-stack developer focused on building clean, user-centric web apps. I love solving problems with code and design.
+              Hi! I'm Jane, a fresh graduate passionate about web development and design. I enjoy learning new technologies and building projects that solve real-world problems.
             </p>
             <p>
-              Outside of coding, I enjoy exploring new tech, contributing to open source, and sipping great coffee.
+              I'm eager to start my career, contribute to exciting teams, and grow as a developer.
             </p>
           </div>
           {/* About image placeholder (replace src with your own image for production) */}
@@ -41,21 +41,7 @@ function About() {
             <img src="https://placehold.co/300x300?text=About+Me" alt="About me placeholder" />
           </div>
         </div>
-        {/* Highlights */}
-        <div className="highlights">
-          <div className="highlight-item">
-            <h3>30+</h3>
-            <p>Projects Delivered</p>
-          </div>
-          <div className="highlight-item">
-            <h3>4+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div className="highlight-item">
-            <h3>15+</h3>
-            <p>Happy Clients</p>
-          </div>
-        </div>
+        {/* Highlights removed for a more relevant fresh graduate portfolio */}
       </div>
     </section>
   );
