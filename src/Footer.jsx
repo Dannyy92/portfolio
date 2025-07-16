@@ -10,10 +10,10 @@ function Footer() {
   const currentYear = new Date().getFullYear();
   // Social links (edit as needed)
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/yourusername', icon: '🔗' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername', icon: '💼' },
-    { name: 'Twitter', url: 'https://twitter.com/yourusername', icon: '🐦' },
-    { name: 'Email', url: 'mailto:jane@example.com', icon: '📧' },
+    { name: 'GitHub', url: 'https://github.com/dannyy92', icon: '🔗' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/yihong0192a', icon: '💼' },
+    { name: 'Whatsapp', url: 'https://wa.me/60125442898', icon: '📱' },
+    { name: 'Email', url: 'dannyyeap922@gmail.com', icon: '📧' },
   ];
   return (
     <footer className="footer">
@@ -21,7 +21,7 @@ function Footer() {
         <div className="footer-content">
           {/* Copyright */}
           <div className="footer-text">
-            <p>&copy; {currentYear} Jane Doe. All rights reserved.</p>
+            <p>&copy; {currentYear} Yi Hong. All rights reserved.</p>
           </div>
           {/* Social links */}
           <div className="social-links">

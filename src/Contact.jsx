@@ -25,34 +25,28 @@ function Contact() {
   return (
     <section id="contact" className="contact" ref={sectionRef}>
       <div className="container">
-        <h2>Get In Touch</h2>
+        <h2>Let's Connect!</h2>
         <div className="contact-content">
           {/* Contact info only, no form */}
           <div className="contact-info">
-            <h3>Let's work together!</h3>
-            <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate!</p>
+            <h3>Open to new opportunities!</h3>
+            <p>I’m excited to start my career and open to new opportunities. Feel free to reach out for collaborations, job offers, or just to connect!</p>
             <div className="contact-details">
               <div className="contact-item">
                 <div className="contact-icon">📧</div>
                 <div className="contact-text">
                   <span className="contact-label">Email</span>
-                  <a href="mailto:jane@example.com" className="contact-value">jane@example.com</a>
+                  <a href="mailto:dannyyeap922@gmail.com" className="contact-value">dannyyeap922@gmail.com</a>
                 </div>
               </div>
               <div className="contact-item">
                 <div className="contact-icon">📱</div>
                 <div className="contact-text">
                   <span className="contact-label">Phone</span>
-                  <a href="tel:+1234567890" className="contact-value">+1 (234) 567-890</a>
+                  <a href="tel:+60125442898" className="contact-value">+60 (12) 544-2898</a>
                 </div>
               </div>
-              <div className="contact-item">
-                <div className="contact-icon">📍</div>
-                <div className="contact-text">
-                  <span className="contact-label">Location</span>
-                  <span className="contact-value">New York, NY</span>
-                </div>
-              </div>
+              {/* You can add another relevant contact method here if desired */}
             </div>
           </div>
         </div>
