@@ -20,7 +20,7 @@
 /* Light mode section backgrounds */
 .hero, .about, .skills, .projects, .contact {
   background: #f8f9fb; /* subtle light gray */
-  text-decoration-color: #181a1b;
+  color: #181a1b;
 }
 .footer {
   background: #222;
