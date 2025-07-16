@@ -1,0 +1,282 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Hero Section Styles */
+.hero {
+  padding: 4rem 0 2rem 0;
+  background: #f5f7fa;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero h2 {
+  font-size: 1.5rem;
+  color: #646cff;
+  margin-bottom: 1rem;
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background: #646cff;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.cta-button:hover {
+  background: #535bf2;
+}
+
+/* About Section Styles */
+.about {
+  padding: 3rem 0;
+  background: #fff;
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #646cff;
+}
+
+/* Skills Section Styles */
+.skills {
+  padding: 3rem 0;
+  background: #f5f7fa;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.skills-list li {
+  background: #646cff;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Projects Section Styles */
+.projects {
+  padding: 3rem 0;
+  background: #fff;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.project-card {
+  background: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  max-width: 320px;
+  text-align: left;
+}
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.project-link {
+  color: #646cff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Contact Section Styles */
+.contact {
+  padding: 3rem 0;
+  background: #f5f7fa;
+}
+.contact-email {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #646cff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+  padding: 2rem 0 1rem 0;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+.social-links {
+  margin-bottom: 0.5rem;
+}
+.social-links a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.social-links a:hover {
+  color: #646cff;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background: #181a1b !important;
+  color: #f5f7fa !important;
+}
+.dark-mode .hero,
+.dark-mode .about,
+.dark-mode .skills,
+.dark-mode .projects,
+.dark-mode .contact {
+  background: #23272f !important;
+  color: #f5f7fa !important;
+}
+.dark-mode .footer {
+  background: #111;
+  color: #f5f7fa;
+}
+.dark-mode .skills-list li,
+.dark-mode .project-card {
+  background: #23272f !important;
+  color: #f5f7fa !important;
+}
+.dark-mode .cta-button,
+.dark-mode .project-link,
+.dark-mode .contact-email {
+  background: #535bf2 !important;
+  color: #fff !important;
+}
+.dark-mode .cta-button:hover,
+.dark-mode .project-link:hover {
+  background: #646cff !important;
+}
+.dark-mode .social-links a {
+  color: #f5f7fa;
+}
+.dark-mode .social-links a:hover {
+  color: #646cff;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.dark-mode-toggle:hover {
+  background: #535bf2;
+}
+
+/* Fade-in on scroll animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Button hover effect (already present, but add scale) */
+.cta-button, .project-link, .contact-email {
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.cta-button:hover, .project-link:hover, .contact-email:hover {
+  transform: scale(1.05);
+}
+
+/* Card hover effect for projects */
+.project-card {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.project-card:hover {
+  box-shadow: 0 8px 24px rgba(100,108,255,0.15);
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* Hero text animation (slide-in) */
+.hero h1, .hero h2, .hero p {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: hero-slide-in 0.8s forwards;
+}
+.hero h1 { animation-delay: 0.1s; }
+.hero h2 { animation-delay: 0.3s; }
+.hero p { animation-delay: 0.5s; }
+@keyframes hero-slide-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
