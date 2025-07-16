@@ -13,8 +13,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background: #fff; /* true white */
-  color: #181a1b;  /* very dark text */
+  background: #fff !important; /* true white */
+  color: #181a1b !important;  /* very dark text */
 }
 
 /* Light mode section backgrounds */
