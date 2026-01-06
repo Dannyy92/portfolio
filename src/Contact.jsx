@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { LuMail, LuPhone } from 'react-icons/lu';
 
 /**
  * Contact.jsx
@@ -33,14 +34,16 @@ function Contact() {
             <p>I’m excited to start my career and open to new opportunities. Feel free to reach out for collaborations, job offers, or just to connect!</p>
             <div className="contact-details">
               <div className="contact-item">
-                <div className="contact-icon">📧</div>
+                {/* Email icon as emoji */}
+                <div className="contact-icon"><LuMail size={24} color="var(--icon-color)" variant="Linear" /></div>
                 <div className="contact-text">
                   <span className="contact-label">Email</span>
                   <a href="mailto:dannyyeap922@gmail.com" className="contact-value">dannyyeap922@gmail.com</a>
                 </div>
               </div>
               <div className="contact-item">
-                <div className="contact-icon">📱</div>
+                {/* Phone icon as emoji */}
+                <div className="contact-icon"><LuPhone size={24} color="var(--icon-color)" variant="Linear" /></div>
                 <div className="contact-text">
                   <span className="contact-label">Phone</span>
                   <a href="tel:+60125442898" className="contact-value">+60 (12) 544-2898</a>

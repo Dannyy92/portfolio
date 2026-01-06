@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './App.css';
+import resume from './assets/Yeap Yi Hong_Resume_Updated.pdf';
+import { LuChevronDown, LuChevronsDown } from 'react-icons/lu';
 
 /**
  * Hero.jsx
@@ -16,19 +18,24 @@ function Hero() {
 
   return (
     <section id="hero" className="hero" ref={sectionRef}>
+      <div className="hero-background">
+        <div className='hero-shape hero-teal hero-opacity-50 hero-blur'></div>
+        <div className='hero-shape hero-primary hero-opacity-50 hero-blur'></div>
+      </div>
       <div className="container hero-content">
         {/* Hero text */}
         <div className="hero-text">
-          <h1>Jane Doe</h1>
-          <h2>Building beautiful, functional web experiences</h2>
-          <p>Modern full-stack developer passionate about design, code, and user experience.</p>
+          <h1>Yeap Yi Hong</h1>
+          <h2>Digital Media Technology Graduate</h2>
+          <p>Passionate about developing and designing</p>
           <div className="hero-actions">
-            <a href="#projects" className="btn btn-primary">View Projects</a>
+            <a href="#projects" className="btn btn-primary">View My Projects</a>
             <a href="#contact" className="btn btn-secondary">Contact Me</a>
             {/* Button to view PDF resume (replace href with your actual PDF file) */}
-            <a href="/resume.pdf" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
+            <a href={resume} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">View My Resume (PDF)</a>
           </div>
         </div>
+        <div className="hero-scroll-down"><LuChevronsDown size={30}/></div>
         {/* Removed profile image for a cleaner hero section */}
       </div>
     </section>

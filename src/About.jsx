@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import profile from './assets/profile.jpg';
 
 /**
  * About.jsx
@@ -25,20 +26,23 @@ function About() {
   return (
     <section id="about" className="about" ref={sectionRef}>
       <div className="container">
-        <h2>About Me</h2>
+        <h2 className="about-title">Who am I?</h2>
         <div className="about-content">
           {/* About text */}
           <div className="about-text">
-            <p>
-              Hi! I'm Jane, a fresh graduate passionate about web development and design. I enjoy learning new technologies and building projects that solve real-world problems.
-            </p>
-            <p>
-              I'm eager to start my career, contribute to exciting teams, and grow as a developer.
-            </p>
+            <div className='about-text-p1'>
+              <p>Hi! I'm Yi Hong, a Digital Media Technology graduate from Xiamen University Malaysia, passionate about game developments, designs, 3D modeling, and animation.</p>
+            </div>
+            <div className='about-text-p2'>
+              <p>I enjoy learning new technologies and building projects that blend creativity with technical skills by utilizing industry-standard tools.</p>
+            </div>
+            <div className='about-text-p3'>
+              <p>I'm motivated, adaptable, and always ready to learn—committed to supporting dynamic projects and growing as a professional in the digital media field.</p>
+            </div>
           </div>
           {/* About image placeholder (replace src with your own image for production) */}
           <div className="about-image">
-            <img src="https://placehold.co/300x300?text=About+Me" alt="About me placeholder" />
+            <img src={profile} alt="Profile" />
           </div>
         </div>
         {/* Highlights removed for a more relevant fresh graduate portfolio */}

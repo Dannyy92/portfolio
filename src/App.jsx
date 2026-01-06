@@ -33,14 +33,23 @@ function App() {
       <main>
         {/* Hero: Introduction section */}
         <Hero />
-        {/* About: Personal summary */}
-        <About />
-        {/* Skills: Technologies and tools */}
-        <Skills />
-        {/* Projects: Portfolio showcase */}
-        <Projects />
-        {/* Contact: Contact form and info */}
-        <Contact />
+        <div className="connected-background">
+          <div className="connected-background-shape connected-background-orange connected-background-opacity-50 connected-background-blur"></div>
+          <div className="connected-background-shape connected-background-purple connected-background-opacity-50 connected-background-blur"></div>
+          <div className="connected-background-shape connected-background-pink connected-background-blur"></div>
+          <div className="connected-background-shape connected-background-yellow connected-background-blur"></div>
+          <div className="connected-background-shape connected-background-green connected-background-blur"></div>
+          <div className="connected-background-shape connected-background-blue connected-background-blur"></div>
+          <div className="connected-background-shape connected-background-mint connected-background-opacity-50 connected-background-blur"></div>
+          {/* About: Personal summary */}
+          <About />
+          {/* Skills: Technologies and tools */}
+          <Skills />
+          {/* Projects: Portfolio showcase */}
+          <Projects />
+          {/* Contact: Contact form and info */}
+          <Contact />
+        </div>
       </main>
       {/* Footer: Social links and copyright */}
       <Footer />

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { LuGithub, LuLinkedin, LuMessageCircle, LuMail } from 'react-icons/lu';
 
 /**
  * Footer.jsx
@@ -8,12 +9,12 @@ import './App.css';
  */
 function Footer() {
   const currentYear = new Date().getFullYear();
-  // Social links (edit as needed)
+  // Social links
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/dannyy92', icon: '🔗' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/yihong0192a', icon: '💼' },
-    { name: 'Whatsapp', url: 'https://wa.me/60125442898', icon: '📱' },
-    { name: 'Email', url: 'dannyyeap922@gmail.com', icon: '📧' },
+    { name: 'GitHub', url: 'https://github.com/dannyy92', icon: <LuGithub size={24} color="var(--icon-color)" variant="Linear" /> },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/yihong0192a', icon: <LuLinkedin size={24} color="var(--icon-color)" variant="Linear" /> },
+    { name: 'Whatsapp', url: 'https://wa.me/60125442898', icon: <LuMessageCircle size={24} color="var(--icon-color)" variant="Linear" /> },
+    { name: 'Email', url: 'mailto:dannyyeap922@gmail.com', icon: <LuMail size={24} color="var(--icon-color)" variant="Linear" /> },
   ];
   return (
     <footer className="footer">
