@@ -262,6 +262,7 @@ function Projects() {
       cover: '/portfolio/assets/Unreal CPP Dev/Cover.png',
       images: [
         {type: 'video', src: '/portfolio/assets/Unreal CPP Dev/FeatureDemo.mp4'},
+        {type: 'video', src: '/portfolio/assets/Unreal CPP Dev/gameplay.mp4'},
         '/portfolio/assets/Unreal CPP Dev/Cover.png',
         '/portfolio/assets/Unreal CPP Dev/1.png',
         '/portfolio/assets/Unreal CPP Dev/2.png',
